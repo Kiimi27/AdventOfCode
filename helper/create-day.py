@@ -17,7 +17,8 @@ if not os.path.exists(f'../code/{year}/day{day}'):
 with open(f'../code/{year}/day{day}/input.txt', 'w') as f:
     if not no_dl:
         with open('session-cookie.txt', 'r') as cookie:
-            f.write(requests.get(f'https://adventofcode.com/{year}/day/{day}/input', cookies={'session': cookie.read()}).text)
+            pass
+            # f.write(requests.get(f'https://adventofcode.com/{year}/day/{day}/input', cookies={'session': cookie.read()}).text)
 
 shutil.copyfile('template/parts-template.py', f'../code/{year}/day{day}/part1.py')
 shutil.copyfile('template/parts-template.py', f'../code/{year}/day{day}/part2.py')
